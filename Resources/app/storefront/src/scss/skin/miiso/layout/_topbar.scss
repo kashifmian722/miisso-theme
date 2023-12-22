@@ -1,0 +1,93 @@
+// --------------------------------------------------
+// copyright  ©  TAB10 / ENOOA s.r.o.
+// --------------------------------------------------
+
+.top-bar{
+    background: $miiso-topbar-background-color;
+    padding: 4px 20px;
+
+    .dropdown-menu{
+        background: $miiso-topbar-background-color;
+    }
+
+    .dropdown-toggle{
+        text-overflow: inherit;
+
+        &#languagesDropdown-top-bar,
+        &#currenciesDropdown-top-bar{
+            text-align: center;
+        }
+
+        .icon{
+            color: $miiso-topbar-font-color
+        }
+
+        &::after{
+            display: none;
+        }
+    }
+
+    &:not(.navigation-offcanvas-actions){
+        .top-bar-nav-btn.btn,
+        .top-bar-list-item{
+            font-weight: 300; // TODO: editable
+            color: $miiso-topbar-font-color;
+
+            &:hover{
+                color: $miiso-topbar-hover-color;
+            }
+        }
+
+        .dropdown.show .top-bar-nav-btn,
+        .dropdown.show .top-bar-nav-btn .icon{
+            color: $miiso-topbar-hover-color;
+        }
+    }
+
+    .icon-help{
+        display: none;
+    }
+}
+
+.top-bar-nav{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.top-bar-nav-btn.btn,
+.top-bar-list-item,
+.miiso-topbar-usp-item{
+    font-size: 12px; // TODO: editable
+}
+
+.dropdown-menu{
+    border: none;
+    box-shadow: 0 5px 10px rgba(0,0,0,.1);
+}
+
+.miiso-topbar-usps{
+    display: flex;
+    align-items: center;
+    color: $miiso-topbar-font-color;
+    margin-right: auto;
+}
+
+.miiso-topbar-usp-item{
+    margin: 0 25px 0 0;
+    padding: 0 0 0 18px;
+    position:relative;
+
+    &::before{
+        display: block;
+        content: "";
+        width: 12px;
+        height: 12px;
+        background: inline-svg('<svg version="1.1" id="fl-checkmark" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="24px" height="24px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve"><g><polygon style="fill:'+$miiso-topbar-font-color+';" points="7.865,20.555 0,12.688 0.975,11.715 7.865,18.605 23.025,3.445 24,4.42"/></g></svg>') no-repeat;
+        background-size:contain;
+        position: absolute;
+        top: 50%;
+        left:0;
+        @include transform(translateY(-50%));
+    }
+
+}

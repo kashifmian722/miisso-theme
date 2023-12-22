@@ -1,0 +1,32 @@
+{% sw_extends '@Storefront/storefront/layout/header/top-bar.html.twig' %}
+
+
+{% block layout_header_top_bar_language %}
+    {% if config('TabtenTemplateMiiso.config.miisoThemeActive') == true %}
+
+        {% block miiso_topbar_usps %}
+            <div class="miiso-topbar-usps">
+                {% block miiso_topbar_usp_item_01 %}
+                    <div class="miiso-topbar-usp-item">
+                        {{ "tabten-miiso.usps.usp01"|trans() }}
+                    </div>
+                {% endblock %}
+                {% block miiso_topbar_usp_item_02 %}
+                    <div class="miiso-topbar-usp-item">
+                        {{ "tabten-miiso.usps.usp02"|trans() }}
+                    </div>
+                {% endblock %}
+                {% block miiso_topbar_usp_item_03 %}
+                    <div class="miiso-topbar-usp-item">
+                        {{ "tabten-miiso.usps.usp03"|trans() }}
+                    </div>
+                {% endblock %}
+            </div>
+        {% endblock %}
+
+    {% endif %}
+
+    {{ parent() }}
+{% endblock %}
+
+

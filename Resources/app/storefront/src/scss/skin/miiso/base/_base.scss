@@ -1,0 +1,28 @@
+// --------------------------------------------------
+// copyright  ©  TAB10 / ENOOA s.r.o.
+// --------------------------------------------------
+body {
+    //font-weight: 300; // TODO: editalbe
+}
+
+.dropdown{
+    .dropdown-menu{
+        opacity: 0;
+        -webkit-animation: fadeIn .5s;
+        animation: fadeIn .5s;
+    }
+
+    &.show{
+        .dropdown-menu{
+            opacity: 1;
+        }
+    }
+}
+
+.btn .icon{
+    &.icon-log-out{
+        svg{
+            top: 4px;
+        }
+    }
+}

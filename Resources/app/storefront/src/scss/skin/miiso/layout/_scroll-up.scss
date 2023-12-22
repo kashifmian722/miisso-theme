@@ -1,0 +1,46 @@
+// --------------------------------------------------
+// copyright  ©  TAB10 / ENOOA s.r.o.
+// --------------------------------------------------
+.scroll-up-button {
+    right: 60px; // TODO: editable
+    transform: scale(1) translateY(150%);
+    transition: 0.45s cubic-bezier(0.3, 0, 0.15, 1);
+
+    &.is-visible {
+        opacity: 1;
+        transform: scale(1) translateY(-50%);
+        visibility: visible;
+    }
+
+    .btn{
+        border-radius: 50%;
+        width: 45px;
+        height: 45px;
+        background: rgba(0,0,0,.05); // TODO: editable
+        border-color: rgba(0,0,0,.05); // TODO: editable
+        border: none;
+        box-shadow: 0 60px 60px 0 rgba(0,0,0,.04),0 30px 30px 0 rgba(26,35,40,.08),0 15px 15px 0 rgba(26,35,40,.08),0 8px 8px 0 rgba(26,35,40,.08),0 4px 4px 0 rgba(26,35,40,.08),0 2px 2px 0 rgba(26,35,40,.08);
+
+
+        .icon {
+            color: #888; // TODO: editable
+
+            > svg{
+                @include transition;
+            }
+        }
+
+
+        &:not(:disabled):not(.disabled):active,
+        &:focus,
+        &:active{
+            background: rgba(0,0,0,.1);
+        }
+
+        &:hover{
+            .icon > svg{
+                top: 0;
+            }
+        }
+    }
+}

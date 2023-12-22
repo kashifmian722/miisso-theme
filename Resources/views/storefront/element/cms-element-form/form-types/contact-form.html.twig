@@ -1,0 +1,76 @@
+{% sw_extends '@Storefront/storefront/element/cms-element-form/form-types/contact-form.html.twig' %}
+
+{# TODO  this whole file insn't necessary, should be fixed by shopware: https://issues.shopware.com/issues/NEXT-11457 #}
+
+{% block cms_form_contact_input_first_name %}
+    {% if theme_config('miiso-float-labels') %}
+        {% set firstNameFieldRequired = config('core.basicInformation.firstNameFieldRequired') == true %}
+        {% sw_include '@Storefront/storefront/element/cms-element-form/form-components/cms-element-form-input.html.twig'
+            with {
+            fieldName: 'firstName',
+            type:'text',
+            required: firstNameFieldRequired,
+            additionalClass: 'col-md-4',
+            label: 'account.personalFirstNameLabel',
+            placeholder: 'account.personalFirstNamePlaceholder'
+        }
+        %}
+    {% else %}
+        {{ parent() }}
+    {% endif %}
+{% endblock %}
+
+{% block cms_form_contact_input_last_name %}
+
+    {% if theme_config('miiso-float-labels') %}
+        {% set lastNameFieldRequired = config('core.basicInformation.lastNameFieldRequired') == true %}
+        {% sw_include '@Storefront/storefront/element/cms-element-form/form-components/cms-element-form-input.html.twig'
+            with {
+            fieldName: 'lastName',
+            type: 'text',
+            required: lastNameFieldRequired,
+            additionalClass: 'col-md-4',
+            label: 'account.personalLastNameLabel',
+            placeholder: 'account.personalLastNamePlaceholder'
+        }
+        %}
+    {% else %}
+        {{ parent() }}
+    {% endif %}
+
+{% endblock %}
+
+{% block cms_form_contact_input_phome %}
+    {% if theme_config('miiso-float-labels') %}
+        {% set phoneNumberFieldRequired = config('core.basicInformation.phoneNumberFieldRequired') == true %}
+        {% sw_include '@Storefront/storefront/element/cms-element-form/form-components/cms-element-form-input.html.twig'
+            with {
+            fieldName: 'phone',
+            type: 'tel',
+            required: phoneNumberFieldRequired,
+            additionalClass: 'col-md-6',
+            label: 'account.personalPhoneLabel',
+            placeholder: 'account.personalPhonePlaceholder'
+        }
+        %}
+    {% else %}
+        {{ parent() }}
+    {% endif %}
+{% endblock %}
+
+{% block cms_form_contact_input_subject %}
+    {% if theme_config('miiso-float-labels') %}
+        {% sw_include '@Storefront/storefront/element/cms-element-form/form-components/cms-element-form-input.html.twig'
+            with {
+            required: true,
+            fieldName: 'subject',
+            type: 'text',
+            additionalClass: 'col-12',
+            label: 'contact.subjectLabel',
+            placeholder: 'contact.subjectPlaceholder'
+        }
+        %}
+    {% else %}
+        {{ parent() }}
+    {% endif %}
+{% endblock %}

@@ -1,0 +1,13 @@
+{% sw_extends '@Storefront/storefront/layout/meta.html.twig' %}
+
+
+{% block layout_head_stylesheet %}
+    {{ parent() }}
+
+    {% if config('TabtenTemplateMiiso.config.miisoCustomCss') %}
+        <style>
+            {{ config('TabtenTemplateMiiso.config.miisoCustomCss') }}
+        </style>
+    {% endif %}
+
+{% endblock %}

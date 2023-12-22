@@ -1,0 +1,104 @@
+// --------------------------------------------------
+// copyright  ©  TAB10 / ENOOA s.r.o.
+// --------------------------------------------------
+/*
+Sidebar category navigation
+==============================================
+Styling for category navigation component.
+*/
+
+.has--sidebar{
+    > .col-12{
+        padding-left: 0;
+    }
+}
+
+.category-navigation {
+    display: none;
+
+    &.level-0 {
+        font-size: 14px;
+    }
+
+    &.level-1{
+        .category-navigation-link{
+            padding: 4px 10px 4px 20px;
+
+            &:hover{
+                .icon-arrow-medium-right{
+                    left: 5px;
+                }
+            }
+
+            .icon-arrow-medium-right{
+                right: auto;
+                left: 0;
+                @include transition();
+            }
+        }
+
+        .category-navigation-entry{
+            &:last-child{
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+    @include media-breakpoint-up(lg) { display: block; }
+}
+
+.category-navigation.level-0 > .category-navigation-entry{
+    border-bottom: 0;
+    border-top: 1px solid $miiso-border-color;
+    border-bottom-color: $miiso-border-color;
+}
+
+.category-navigation-entry {
+    margin: 0;
+    padding: 0;
+}
+
+.category-navigation-link {
+    display: block;
+    padding: 15px 20px;
+    font-weight: normal;
+    color: $sw-text-color;
+    position: relative;
+
+    &:hover {
+        text-decoration: none;
+
+        .icon-arrow-medium-right{
+            right: 5px;
+        }
+    }
+
+    &.is-active {
+        color: $sw-text-color;
+        font-weight: bold;
+
+        .icon-arrow-medium-right{
+            @include transform(translateY(-50%) rotate(90deg));
+        }
+    }
+
+    &.in-path {
+        font-weight: bold;
+    }
+
+    .icon-arrow-medium-right{
+        position: absolute;
+        right: 10px;
+        width: 12px;
+        height: 12px;
+        top: 50%;
+        @include translate(0, -50%);
+        @include transition();
+
+        svg{
+            top: 0;
+        }
+    }
+}
+
+

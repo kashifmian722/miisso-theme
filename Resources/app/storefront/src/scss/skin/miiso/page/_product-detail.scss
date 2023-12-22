@@ -1,0 +1,53 @@
+// --------------------------------------------------
+// copyright  ©  TAB10 / ENOOA s.r.o.
+// --------------------------------------------------
+
+
+.is-ctl-product {
+    .card-tabs {
+        .nav-link {
+            &.active,
+            &:hover {
+                background: none;
+
+            }
+        }
+    }
+
+    .cms-section .boxed{
+        padding: 0 20px;
+    }
+}
+
+
+.product-detail-manufacturer{
+
+    @include media-breakpoint-down(md) {
+        display: none;
+    }
+
+    .product-detail-manufacturer-logo{
+        max-width: 150px;
+    }
+}
+
+.product-detail-buy{
+    .product-wishlist{
+        margin:10px 0;
+
+        .product-wishlist-btn-content{
+            text-decoration:none;
+        }
+    }
+}
+
+
+.product-detail-tabs-content{
+    .product-box{
+        &.box-standard {
+            .product-description{
+                display: none;
+            }
+        }
+    }
+}

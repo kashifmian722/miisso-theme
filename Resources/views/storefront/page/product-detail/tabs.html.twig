@@ -1,0 +1,40 @@
+{% sw_extends '@Storefront/storefront/page/product-detail/tabs.html.twig' %}
+
+
+{% block page_product_detail_tabs_navigation_description %}
+    {{ parent() }}
+
+    {% if theme_config('miiso-properties-tab') and page.product.sortedProperties|length > 0 %}
+        <li class="nav-item">
+            <a class="nav-link {% if (ratingSuccess == 1) or (ratingSuccess == -1) %}active{% endif %} product-detail-tab-navigation-link"
+               id="properties-tab"
+               data-toggle="tab"
+               data-offcanvas-tabs="true"
+               href="#properties-tab-pane"
+               role="tab"
+               aria-controls="properties-tab-pane"
+               aria-selected="true">
+                {{ "tabten-miiso.detail.properties"|trans|sw_sanitize }}
+                <span class="product-detail-tab-navigation-icon">
+                    {% sw_icon 'arrow-medium-right' style {'pack':'solid'} %}
+                </span>
+            </a>
+        </li>
+    {% endif %}
+{% endblock %}
+
+
+
+{% block page_product_detail_tabs_content_description %}
+    {{ parent() }}
+    {% if theme_config('miiso-properties-tab') and page.product.sortedProperties|length > 0%}
+        <div class="tab-pane fade show {% if (ratingSuccess == 1) or (ratingSuccess == -1) %}active{% endif %}"
+             id="properties-tab-pane"
+             role="tabpanel"
+             aria-labelledby="properties-tab">
+            {% sw_include '@Storefront/storefront/page/product-detail/properties-tab.html.twig' %}
+        </div>
+    {% endif %}
+{% endblock %}
+
+

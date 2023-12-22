@@ -1,0 +1,105 @@
+// --------------------------------------------------
+// copyright  ©  TAB10 / ENOOA s.r.o.
+// --------------------------------------------------
+.offcanvas-cart {
+    overflow: hidden;
+
+    .offcanvas-cart-header{
+        margin: 10px 0;
+    }
+
+    .offcanvas-cart-items{
+        margin-top: 0;
+    }
+
+    .offcanvas-summary,
+    .offcanvas-cart-tax,
+    .offcanvas-cart-actions{
+        padding: 0 15px;
+    }
+
+    .alert{
+        margin: 15px;
+    }
+
+    .cart-item-details{
+        margin-bottom: 5px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .cart-item{
+        padding: 10px;
+        border-color: $miiso-border-color;
+        background: #fbfbfb;
+        @include transition();
+
+        &:hover{
+            background: #fff;
+        }
+
+        &:first-child{
+            border-top:1px solid $miiso-border-color;
+        }
+    }
+
+    .cart-item-img{
+        width: 65px;
+        height: 65px;
+    }
+
+    .cart-quantity-price{
+        align-items: flex-end;
+    }
+
+    .custom-select{
+        height: 32px;
+        padding-top: 6px;
+    }
+}
+
+.offcanvas-cart-promotion-form{
+    position: relative;
+
+    #addPromotionOffcanvasCartInput{
+        padding-right: 55px;
+        border-radius:$miiso-border-radius;
+
+        ~ .input-group-append{
+            position: absolute;
+            right: 0;
+            z-index: 20;
+        }
+    }
+}
+
+
+#addPromotionOffcanvasCart{
+    &.btn-dark{
+        background: transparent;
+        border: none;
+
+        .icon{
+            color: $sw-text-color;
+        }
+
+        &:hover{
+            .icon{
+                color: $sw-color-success;
+            }
+        }
+    }
+}
+
+.cart-item-img{
+    border: none;
+}
+
+.cart-item-delivery-date{
+    font-size: 12px;
+}
+
+.cart-item-ordernumber{
+    margin: 0;
+}

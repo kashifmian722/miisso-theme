@@ -1,0 +1,15 @@
+{% sw_extends '@Storefront/storefront/element/cms-element-product-slider.html.twig' %}
+
+{% block element_product_slider_controls_items %}
+    <button aria-label="prev" class="base-slider-controls-prev product-slider-controls-prev{% if sliderConfig.border.value %} has-border{% endif %}">
+        {% block element_product_slider_controls_items_prev_icon %}
+            {% sw_icon 'arrow-head-left' %}
+        {% endblock %}
+    </button>
+    <button aria-label="next" class="base-slider-controls-next product-slider-controls-next{% if sliderConfig.border.value %} has-border{% endif %}">
+        {% block element_product_slider_controls_items_next_icon %}
+            {% sw_icon 'arrow-head-right' %}
+        {% endblock %}
+    </button>
+{% endblock %}
+

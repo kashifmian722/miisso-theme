@@ -1,0 +1,660 @@
+{
+  "name": "TabtenTemplateMiiso",
+  "author": "TAB10 / ENOOA s.r.o.",
+  "views": [
+    "@Storefront",
+    "@Plugins",
+    "@TabtenTemplateMiiso"
+  ],
+  "previewMedia": "app/storefront/dist/assets/preview.jpg",
+  "style": [
+    "app/storefront/src/scss/overrides.scss",
+    "@Storefront",
+    "app/storefront/src/scss/base.scss"
+  ],
+  "script": [
+    "@Storefront",
+    "app/storefront/dist/storefront/js/tabten-template-miiso.js"
+  ],
+  "asset": [
+    "app/storefront/dist/assets"
+  ],
+  "config": {
+    "blocks": {
+      "miisoTopbarColors": {
+        "label": {
+          "en-GB": "MIISO - Topbar colours",
+          "de-DE": "MIISO - Topbar-Farben"
+        }
+      },
+      "miisoHeaderColors": {
+        "label": {
+          "en-GB": "MIISO - Header colours",
+          "de-DE": "MIISO - Header-Farben"
+        }
+      },
+      "miisoNavigationColors": {
+        "label": {
+          "en-GB": "MIISO - Navigation colours",
+          "de-DE": "MIISO - Navigations-Farben"
+        }
+      },
+      "miisofooterColors": {
+        "label": {
+          "en-GB": "MIISO - Footer Colors",
+          "de-DE": "MIISO - Footer Farben"
+        }
+      },
+      "miisoMisc": {
+        "label": {
+          "en-GB": "MIISO - Miscellaneous",
+          "de-DE": "MIISO - Sonstiges"
+        }
+      },
+      "miisoLayout": {
+        "label": {
+          "en-GB": "MIISO - Layout",
+          "de-DE": "MIISO - Layout"
+        }
+      },
+      "miisoSocialMedia": {
+        "label": {
+          "en-GB": "MIISO - Social Media",
+          "de-DE": "MIISO - Social Media"
+        }
+      },
+      "miisoGeneral": {
+        "label": {
+          "en-GB": "MIISO - General",
+          "de-DE": "MIISO - General"
+        }
+      },
+      "miisoCallToActionButton": {
+        "label": {
+          "en-GB": "MIISO - Call to action button",
+          "de-DE": "MIISO - Call to action button"
+        }
+      },
+      "miisoTeaser": {
+        "label": {
+          "en-GB": "MIISO - Teaser",
+          "de-DE": "MIISO - Teaser"
+        }
+      }
+    },
+    "tabs": {
+      "miisoHeaderTab": {
+        "label": {
+          "en-GB": "Header",
+          "de-DE": "Header / Kopfbereich"
+        }
+      },
+      "miisoFooterTab": {
+        "label": {
+          "en-GB": "Footer",
+          "de-DE": "Footer / Fußbereich"
+        }
+      },
+      "miisoShoppingExperienceTab": {
+        "label": {
+          "en-GB": "Shopping Experience",
+          "de-DE": "Shopping Experience"
+        }
+      },
+      "miisoMiscTab": {
+        "label": {
+          "en-GB": "Misc",
+          "de-DE": "Verschiedenes"
+        }
+      }
+    },
+
+    "fields": {
+      "miiso-topbar-background-color": {
+        "label": {
+          "en-GB": "Footer background colour",
+          "de-DE": "Footer Hintergrund Farbe"
+        },
+        "type": "color",
+        "value": "#fbfbfb",
+        "editable": true,
+        "block": "miisoTopbarColors",
+        "tab": "miisoHeaderTab",
+        "order": 100
+      },
+      "miiso-topbar-font-color": {
+        "label": {
+          "en-GB": "Topbar font colour",
+          "de-DE": "Topbar Schrift Farbe"
+        },
+        "type": "color",
+        "value": "#000",
+        "editable": true,
+        "block": "miisoTopbarColors",
+        "tab": "miisoHeaderTab",
+        "order": 200
+      },
+      "miiso-topbar-hover-color": {
+        "label": {
+          "en-GB": "Topbar hover colour",
+          "de-DE": "Topbar Schrift Farbe Hover"
+        },
+        "type": "color",
+        "value": "#999",
+        "editable": true,
+        "block": "miisoTopbarColors",
+        "tab": "miisoHeaderTab",
+        "order": 300
+      },
+      "miiso-header-background-color": {
+        "label": {
+          "en-GB": "Header background colour",
+          "de-DE": "Header Hintergrund Farbe"
+        },
+        "type": "color",
+        "value": "#fff",
+        "editable": true,
+        "block": "miisoHeaderColors",
+        "tab": "miisoHeaderTab",
+        "order": 100
+      },
+      "miiso-header-icon-color": {
+        "label": {
+          "en-GB": "Header icon colour",
+          "de-DE": "Header Icon Farbe"
+        },
+        "type": "color",
+        "value": "#000",
+        "editable": true,
+        "block": "miisoHeaderColors",
+        "tab": "miisoHeaderTab",
+        "order": 200
+      },
+      "miiso-header-icon-color-hover": {
+        "label": {
+          "en-GB": "Header icon colour hover",
+          "de-DE": "Header Icon Farbe Hover"
+        },
+        "type": "color",
+        "value": "#999",
+        "editable": true,
+        "block": "miisoHeaderColors",
+        "tab": "miisoHeaderTab",
+        "order": 300
+      },
+      "miiso-header-search-background": {
+        "label": {
+          "en-GB": "Search background",
+          "de-DE": "Suche Hintergrundfarbe"
+        },
+        "type": "color",
+        "value": "#fbfbfb",
+        "editable": true,
+        "block": "miisoHeaderColors",
+        "tab": "miisoHeaderTab",
+        "order": 400
+      },
+      "miiso-header-search-background-focus": {
+        "label": {
+          "en-GB": "Search background on focus",
+          "de-DE": "Suche Hintergrundfarbe aktiv/fokus"
+        },
+        "type": "color",
+        "value": "#fff",
+        "editable": true,
+        "block": "miisoHeaderColors",
+        "tab": "miisoHeaderTab",
+        "order": 500
+      },
+      "miiso-header-search-border": {
+        "label": {
+          "en-GB": "Search border color",
+          "de-DE": "Suche Rahmenfarbe"
+        },
+        "type": "color",
+        "value": "#ededed",
+        "editable": true,
+        "block": "miisoHeaderColors",
+        "tab": "miisoHeaderTab",
+        "order": 600
+      },
+      "miiso-header-search-border-focus": {
+        "label": {
+          "en-GB": "Search border color on focus",
+          "de-DE": "Suche Rahmenfarbe aktiv/fokus"
+        },
+        "type": "color",
+        "value": "#f2f2f2",
+        "editable": true,
+        "block": "miisoHeaderColors",
+        "tab": "miisoHeaderTab",
+        "order": 700
+      },
+      "miiso-header-search-btn-background": {
+        "label": {
+          "en-GB": "Search button background color",
+          "de-DE": "Suche Button Hintergrundfarbe"
+        },
+        "type": "color",
+        "value": "#fbfbfb",
+        "editable": true,
+        "block": "miisoHeaderColors",
+        "tab": "miisoHeaderTab",
+        "order": 800
+      },
+      "miiso-header-search-btn-background-focus": {
+        "label": {
+          "en-GB": "Search button background color on focus",
+          "de-DE": "Suche Button Hintergrundfarbe aktiv/fokus"
+        },
+        "type": "color",
+        "value": "#fff",
+        "editable": true,
+        "block": "miisoHeaderColors",
+        "tab": "miisoHeaderTab",
+        "order": 900
+      },
+      "miiso-header-search-btn-icon-color": {
+        "label": {
+          "en-GB": "Search button icon color",
+          "de-DE": "Suche Icon Farbe"
+        },
+        "type": "color",
+        "value": "#000",
+        "editable": true,
+        "block": "miisoHeaderColors",
+        "tab": "miisoHeaderTab",
+        "order": 1000
+      },
+      "miiso-header-search-color": {
+        "label": {
+          "en-GB": "Searchfield text color",
+          "de-DE": "Suchefeld Textfarbe"
+        },
+        "type": "color",
+        "value": "#999",
+        "editable": true,
+        "block": "miisoHeaderColors",
+        "tab": "miisoHeaderTab",
+        "order": 1100
+      },
+      "miiso-header-search-color-focus": {
+        "label": {
+          "en-GB": "Searchfield text color on fokus/aktiv",
+          "de-DE": "Suchefeld Textfarbe aktiv/fokus"
+        },
+        "type": "color",
+        "value": "#000",
+        "editable": true,
+        "block": "miisoHeaderColors",
+        "tab": "miisoHeaderTab",
+        "order": 1200
+      },
+      "miiso-header-navi-background-color": {
+        "label": {
+          "en-GB": "Navigation background",
+          "de-DE": "Navigation Hintergrundfarbe"
+        },
+        "type": "color",
+        "value": "#fff",
+        "editable": true,
+        "block": "miisoNavigationColors",
+        "tab": "miisoHeaderTab",
+        "order": 100
+      },
+      "miiso-header-navi-color": {
+        "label": {
+          "en-GB": "Navigation text color",
+          "de-DE": "Navigation Textfarbe"
+        },
+        "type": "color",
+        "value": "#000",
+        "editable": true,
+        "block": "miisoNavigationColors",
+        "tab": "miisoHeaderTab",
+        "order": 200
+      },
+      "miiso-header-navi-background-color-hover": {
+        "label": {
+          "en-GB": "Navigation background",
+          "de-DE": "Navigation Hintergrundfarbe"
+        },
+        "type": "color",
+        "value": "#fff",
+        "editable": true,
+        "block": "miisoNavigationColors",
+        "tab": "miisoHeaderTab",
+        "order": 300
+      },
+      "miiso-header-navi-color-hover": {
+        "label": {
+          "en-GB": "Navigation text color hover",
+          "de-DE": "Navigation Textfarbe hover"
+        },
+        "type": "color",
+        "value": "#999",
+        "editable": true,
+        "block": "miisoNavigationColors",
+        "tab": "miisoHeaderTab",
+        "order": 400
+      },
+      "miiso-header-navi-bordercolor": {
+        "label": {
+          "en-GB": "Navigation border color",
+          "de-DE": "Navigation Rahmenfarbe"
+        },
+        "type": "color",
+        "value": "#ededed",
+        "editable": true,
+        "block": "miisoNavigationColors",
+        "tab": "miisoHeaderTab",
+        "order": 500
+      },
+      "miiso-header-navi-fontsize": {
+        "label": {
+          "en-GB": "Fontsize navigation",
+          "de-DE": "Schriftgröße Navigation"
+        },
+        "type": "text",
+        "value": "13px",
+        "editable": true,
+        "block": "miisoNavigationColors",
+        "tab": "miisoHeaderTab",
+        "order": 600
+      },
+      "miiso-footer-background-color": {
+        "label": {
+          "en-GB": "Footer background colour",
+          "de-DE": "Footer Hintergrund Farbe"
+        },
+        "type": "color",
+        "value": "#f7f7f7",
+        "editable": true,
+        "block": "miisofooterColors",
+        "tab": "miisoFooterTab",
+        "order": 100
+      },
+      "miiso-footer-font-color": {
+        "label": {
+          "en-GB": "Footer font colour",
+          "de-DE": "Footer Schrift Farbe"
+        },
+        "type": "color",
+        "value": "#000",
+        "editable": true,
+        "block": "miisofooterColors",
+        "tab": "miisoFooterTab",
+        "order": 200
+      },
+      "miiso-border-color": {
+        "label": {
+          "en-GB": "Border-colour",
+          "de-DE": "Rahmen Farbe"
+        },
+        "type": "color",
+        "value": "#ededed",
+        "editable": true,
+        "block": "miisoGeneral",
+        "order": 100
+      },
+      "miiso-border-radius": {
+        "label": {
+          "en-GB": "Border radius",
+          "de-DE": "Border Radius"
+        },
+        "type": "text",
+        "value": "0px",
+        "editable": true,
+        "block": "miisoGeneral",
+        "order": 200
+      },
+      "miiso-call-to-action-text": {
+        "label": {
+          "en-GB": "Call to action button text",
+          "de-DE": "Call to Action button Text"
+        },
+        "type": "text",
+        "value": "Mehr erfahren",
+        "editable": true,
+        "block": "miisoCallToActionButton",
+        "tab": "miisoShoppingExperienceTab",
+        "order": 100
+      },
+      "miiso-call-to-action-text-en": {
+        "label": {
+          "en-GB": "Call to action button text EN",
+          "de-DE": "Call to Action button Text EN"
+        },
+        "type": "text",
+        "value": "More",
+        "editable": true,
+        "block": "miisoCallToActionButton",
+        "tab": "miisoShoppingExperienceTab",
+        "order": 200
+      },
+      "miiso-teaser-backgroundcolor": {
+        "label": {
+          "en-GB": "Teaser backgroundcolor",
+          "de-DE": "Teaser Hintergrundfarbe"
+        },
+        "type": "color",
+        "value": "#000",
+        "editable": true,
+        "block": "miisoTeaser",
+        "tab": "miisoShoppingExperienceTab",
+        "order": 100
+      },
+      "miiso-teaser-textcolor": {
+        "label": {
+          "en-GB": "Teaser textcolor",
+          "de-DE": "Teaser Textfarbe"
+        },
+        "type": "color",
+        "value": "#fff",
+        "editable": true,
+        "block": "miisoTeaser",
+        "tab": "miisoShoppingExperienceTab",
+        "order": 200
+      },
+      "miiso-sticky-navigation-logo": {
+        "label": {
+          "en-GB": "Sticky navigation logo",
+          "de-DE": "Logo in fixierter Navigation"
+        },
+        "helpText": {
+          "en-GB": "Displayed in fixed navigation if edited here",
+          "de-DE": "Wird in der fixierten Navigation angezeigt falls eingetragen"
+        },
+        "type": "media",
+        "value": "",
+        "editable": true,
+        "block": "miisoMisc",
+        "tab": "miisoMiscTab",
+        "order": 100
+      },
+      "miiso-native-lazyloading": {
+        "label": {
+          "en-GB": "Native lazyloading for productbox images (pagespeed)",
+          "de-DE": "Natives Lazyloading für Bilder in den Produktboxen, verbessert die Ladezeiten"
+        },
+        "type": "switch",
+        "value": true,
+        "editable": true,
+        "block": "miisoMisc",
+        "tab": "miisoMiscTab",
+        "order": 200,
+        "scss": false
+      },
+      "miiso-fullwidth-header": {
+        "label": {
+          "en-GB": "Global - Fullwidth header layout",
+          "de-DE": "Global - Volle Bildschirmbreite Headerlayout"
+        },
+        "type": "switch",
+        "value": false,
+        "editable": true,
+        "block": "miisoLayout",
+        "tab": "miisoMiscTab",
+        "order": 100,
+        "scss": false
+      },
+      "miiso-navigation-layout": {
+        "label": {
+          "en-GB": "Global - Select a navigation layout size",
+          "de-DE": "Global - Wähle ein Navigationslayout"
+        },
+        "type": "text",
+        "value": "left",
+        "custom": {
+          "componentName": "sw-single-select",
+          "options": [
+            {
+              "value": "left",
+              "label": {
+                "en-GB": "left",
+                "de-DE": "links"
+              }
+            },
+            {
+              "value": "center",
+              "label": {
+                "en-GB": "center",
+                "de-DE": "zentriert"
+              }
+            }
+          ]
+        },
+        "editable": true,
+        "block": "miisoLayout",
+        "tab": "miisoMiscTab",
+        "order": 200,
+        "scss": false
+      },
+      "miiso-float-labels": {
+        "label": {
+          "en-GB": "Global - Floating labels for formulars",
+          "de-DE": "Global - Floating Labels für Formulare"
+        },
+        "helpText": {
+          "en-GB": "helps the user to use forms. if a user clicks into a form field the lable is still visible on the upper border",
+          "de-DE": "Darstellung der Formulare mit Floatlabels, heisst dass beim reinklicken ins Formularfeld die Bezeichnung des Feldes immer noch sichtbar am oberen Rand ist. Dies hilft dem User beim Bedienen der Formulare."
+        },
+        "type": "switch",
+        "value": true,
+        "editable": true,
+        "block": "miisoLayout",
+        "tab": "miisoMiscTab",
+        "order": 300,
+        "scss": false
+      },
+      "miiso-sticky-navi": {
+        "label": {
+          "en-GB": "Global - Sticky navigation",
+          "de-DE": "Global - Sticky Navigation (navigation bleibt sichtbar beim scrollen)"
+        },
+        "type": "switch",
+        "value": true,
+        "editable": true,
+        "block": "miisoLayout",
+        "tab": "miisoMiscTab",
+        "order": 400,
+        "scss": false
+      },
+      "miiso-hide-home-button-in-navi": {
+        "label": {
+          "en-GB": "Global - Remove home button in navigation",
+          "de-DE": "Global - Home-Button in der Navigation entfernen"
+        },
+        "type": "switch",
+        "value": true,
+        "editable": true,
+        "block": "miisoLayout",
+        "tab": "miisoMiscTab",
+        "order": 500,
+        "scss": false
+      },
+      "miiso-fluid-productbox": {
+        "label": {
+          "en-GB": "Listing - Fluid productbox content (e.g. good for productimages with same size)",
+          "de-DE": "Listing - Fluider Productbox Inhalt (zb. geeignet für Produkt Bilder mit gleicher Größe)"
+        },
+        "type": "switch",
+        "value": false,
+        "editable": true,
+        "block": "miisoLayout",
+        "tab": "miisoMiscTab",
+        "order": 600,
+        "scss": false
+      },
+      "miiso-open-filter-in-sidebar": {
+        "label": {
+          "en-GB": "Listing - Open Filters in sidebar",
+          "de-DE": "Listing - Offene Filter in der Sidebar"
+        },
+        "type": "switch",
+        "value": true,
+        "editable": true,
+        "block": "miisoLayout",
+        "tab": "miisoMiscTab",
+        "order": 700,
+        "scss": false
+      },
+      "miiso-fixed-filter-in-listing": {
+        "label": {
+          "en-GB": "Listing - Fixed Filters in sidebar",
+          "de-DE": "Listing - Fixierte Filter in der Sidebar"
+        },
+        "type": "switch",
+        "value": true,
+        "editable": true,
+        "block": "miisoLayout",
+        "tab": "miisoMiscTab",
+        "order": 700,
+        "scss": false
+      },
+      "miiso-hide-product-characteristics-in-listing": {
+        "label": {
+          "en-GB": "Listing - hide product characteristics from productbox",
+          "de-DE": "Listing - Produktkarakteristiken der Produktbox entfernen"
+        },
+        "type": "switch",
+        "value": true,
+        "editable": true,
+        "block": "miisoLayout",
+        "tab": "miisoMiscTab",
+        "order": 800,
+        "scss": false
+      },
+      "miiso-detail-image-slider": {
+        "label": {
+          "en-GB": "Detail - Replace Detail Image Slider",
+          "de-DE": "Detail - Ersetzten des Detail-Bild-Sliders"
+        },
+        "helpText": {
+          "en-GB": "switch to a more performant slider on the detailpage",
+          "de-DE": "Tauschen Sie den Slider auf der Detailseite durch einen performanteren aus"
+        },
+        "type": "switch",
+        "value": true,
+        "editable": true,
+        "block": "miisoLayout",
+        "tab": "miisoMiscTab",
+        "order": 900,
+        "scss": false
+      },
+      "miiso-properties-tab": {
+        "label": {
+          "en-GB": "Detail - set properties into an extra tab",
+          "de-DE": "Detail - Fügen Sie die Eigenschaften in eigenem Tab ein"
+        },
+        "type": "switch",
+        "value": true,
+        "editable": true,
+        "block": "miisoLayout",
+        "tab": "miisoMiscTab",
+        "order": 1000,
+        "scss": false
+      }
+    }
+  }
+}

@@ -1,0 +1,39 @@
+// --------------------------------------------------
+// copyright  ©  TAB10 / ENOOA s.r.o.
+// --------------------------------------------------
+.breadcrumb {
+   padding: 0;
+   margin-bottom: 11px;
+
+   a{
+      font-size: 10px;
+
+      &.is-active{
+         color: $sw-text-color;
+      }
+   }
+
+   svg{
+      height: 10px;
+      top: 1px;
+      width: 10px;
+   }
+}
+
+.product-detail-content .product-breadcrumb{
+   margin: 0 0 20px;
+}
+
+
+.table-bordered th,
+.table-bordered td{
+   border-color: $miiso-border-color;
+   padding: 4px 10px;
+}
+
+.table-bordered thead th,
+.table-bordered thead td{
+   border-bottom-width: 1px;
+   background: #333;
+   color: #fff;
+}

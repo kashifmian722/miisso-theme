@@ -1,0 +1,36 @@
+{% sw_extends '@Storefront/storefront/component/address/address-form.html.twig' %}
+
+{# TODO  this whole file insn't necessary, problems with state select cause of floatlabel wrap, also wrong lable (shopwarebug) #}
+
+
+{#{% block component_address_form_country_state_label %}#}
+{#    {% if theme_config('miiso-float-labels') %}#}
+{#        <label class="form-label"#}
+{#               for="{{ prefix }}AddressCountryState">#}
+{#            {{ "address.countryStateLabel"|trans|sw_sanitize }}{{ "general.required"|trans|sw_sanitize }}#}
+{#        </label>#}
+{#    {% else %}#}
+{#        {{ parent() }}#}
+{#    {% endif %}#}
+{#{% endblock %}#}
+
+
+{#{% block component_address_form_country_state_select %}#}
+{#    {% if theme_config('miiso-float-labels') %}#}
+{#        <select class="country-state-select custom-select{% if violationPath %} is-invalid{% endif %}"#}
+{#                id="{{ prefix }}AddressCountryState"#}
+{#                name="{{ prefix }}[countryStateId]"#}
+{#                required="required"#}
+{#                data-initial-country-state-id="{{ data.get('countryStateId') }}">#}
+{#            <option value=""#}
+{#                    selected="selected"#}
+{#                    data-placeholder-option="true">#}
+{#                {{ "address.countryStatePlaceholder"|trans|sw_sanitize }}#}
+{#            </option>#}
+{#        </select>#}
+{#    {% else %}#}
+{#        {{ parent() }}#}
+{#    {% endif %}#}
+{#{% endblock %}#}
+
+

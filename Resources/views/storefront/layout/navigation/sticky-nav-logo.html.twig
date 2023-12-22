@@ -1,0 +1,11 @@
+{% block miiso_sticky_nav_logo %}
+    <div class="header-logo-main">
+            <a class="header-logo-main-link"
+               href="{{ path('frontend.home.page') }}"
+               title="{{ "header.logoLink"|trans|striptags }}">
+                    <img src="{{ theme_config('miiso-sticky-navigation-logo')|sw_encode_url }}"
+                         alt="{{ "header.logoLink"|trans|striptags }}"
+                         class="img-fluid header-logo-main-img"/>
+            </a>
+    </div>
+{% endblock %}

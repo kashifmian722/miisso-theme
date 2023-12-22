@@ -1,0 +1,25 @@
+// --------------------------------------------------
+// copyright  ©  TAB10 / ENOOA s.r.o.
+// --------------------------------------------------
+.btn {
+    font-weight: 300; // TODO: editalbe
+
+    &:not(:disabled):not(.disabled):active,
+    &:focus{
+        box-shadow: none;
+    }
+
+    &:hover{
+        color: $sw-color-buy-button-text;
+    }
+
+    &.btn-primary{
+        color: $sw-color-buy-button-text;
+    }
+
+    &.btn-link{
+        &:hover{
+            color: inherit;
+        }
+    }
+}

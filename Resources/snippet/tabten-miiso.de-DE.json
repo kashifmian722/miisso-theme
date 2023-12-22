@@ -1,0 +1,12 @@
+{
+    "tabten-miiso": {
+        "usps": {
+            "usp01": "Kostenloser Versand ab 100 Euro",
+            "usp02": "Sichere SSL Verbindung",
+            "usp03": "Schnelle Lieferung"
+        },
+        "detail": {
+            "properties": "Eigenschaften"
+        }
+    }
+}

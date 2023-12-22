@@ -1,0 +1,12 @@
+{
+    "tabten-miiso": {
+        "usps": {
+            "usp01": "Free shipping from 100 euro",
+            "usp02": "Fast delivery",
+            "usp03": "Secure SSL connection"
+        },
+        "detail": {
+            "properties": "Properties"
+        }
+    }
+}

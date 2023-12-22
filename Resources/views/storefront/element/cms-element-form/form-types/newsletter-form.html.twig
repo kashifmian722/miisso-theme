@@ -1,0 +1,39 @@
+{% sw_extends '@Storefront/storefront/element/cms-element-form/form-types/newsletter-form.html.twig' %}
+
+{# TODO  this whole file insn't necessary, should be fixed by shopware: https://issues.shopware.com/issues/NEXT-11457 #}
+
+{% block cms_form_newsletter_input_first_name %}
+    {% if theme_config('miiso-float-labels') %}
+        {% sw_include '@Storefront/storefront/element/cms-element-form/form-components/cms-element-form-input.html.twig'
+            with {
+            fieldName: 'firstName',
+            type:'text',
+            additionalClass: 'col-md-4',
+            label: 'newsletter.labelFirstName',
+            placeholder: 'newsletter.placeholderFirstName'
+        }
+        %}
+    {% else %}
+        {{ parent() }}
+    {% endif %}
+
+
+{% endblock %}
+
+{% block cms_form_newsletter_input_last_name %}
+    {% if theme_config('miiso-float-labels') %}
+        {% sw_include '@Storefront/storefront/element/cms-element-form/form-components/cms-element-form-input.html.twig'
+            with {
+            fieldName: 'lastName',
+            type:'text',
+            additionalClass: 'col-md-4',
+            label: 'newsletter.labelLastName',
+            placeholder: 'newsletter.placeholderLastName'
+        }
+        %}
+    {% else %}
+        {{ parent() }}
+    {% endif %}
+
+{% endblock %}
+

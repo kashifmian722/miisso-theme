@@ -1,0 +1,55 @@
+// --------------------------------------------------
+// copyright  ©  TAB10 / ENOOA s.r.o.
+// --------------------------------------------------
+
+.miiso-page-home-navigation,
+.is-act-home{
+    .breadcrumb{
+        display: none;
+    }
+
+    .container-main{
+        padding: 0;
+    }
+}
+
+
+// CHECKOUT
+.is-act-checkoutregisterpage .checkout{
+    padding-top: 120px;
+}
+
+.account-register{
+    margin-top: 40px;
+}
+
+.login-advantages{
+    margin-top: 79px;
+}
+
+
+// PRODUCTPAGE
+.is-ctl-product {
+    .delivery-information{
+        font-size: 12px;
+
+        &.delivery-shipping-free{
+            margin: 0;
+        }
+    }
+}
+
+.product-detail-configurator-option-input{
+    &:checked+.product-detail-configurator-option-label{
+        border: 1px solid #eee;
+
+        &.is-display-text{
+            background-color: #eee;
+            color: #000;
+        }
+    }
+
+    &.is-combinable+.product-detail-configurator-option-label {
+        border: 1px solid #eee;
+    }
+}

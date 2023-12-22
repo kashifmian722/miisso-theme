@@ -1,0 +1,24 @@
+// --------------------------------------------------
+// copyright  ©  TAB10 / ENOOA s.r.o.
+// --------------------------------------------------
+.miiso-fullwidth-header{
+    .header-main .top-bar-nav,
+    .header-main .header-row,
+    #mainNavigation .container{
+        max-width: none;
+    }
+
+    .top-bar-nav{
+        padding: 0;
+    }
+
+    .header-search,
+    .navigation-flyout{
+        max-width: none;
+    }
+
+    .navigation-flyout{
+        transform: none;
+        left: 0;
+    }
+}

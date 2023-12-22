@@ -1,0 +1,85 @@
+{% sw_extends '@Storefront/storefront/component/address/address-personal.html.twig' %}
+
+{% block component_address_personal_fields_birthday_select_month %}
+    {% if theme_config('miiso-float-labels') %}
+        <div class="form-group col-md-2 col-4">
+
+            {% block component_address_personal_fields_birthday_month_label %}
+                <label for="{{ prefix }}personalBirthdayMonth">
+                    {{ "account.personalBirthdaySelectMonth"|trans|sw_sanitize }}{{ config('core.loginRegistration.birthdayFieldRequired') ? "general.required"|trans|sw_sanitize }}
+                </label>
+            {% endblock %}
+
+            <select name="{% if prefix %}{{ prefix }}[birthdayMonth]{% else %}birthdayMonth{% endif %}"
+                    id="{{ prefix }}personalBirthdayMonth"
+                    class="custom-select{% if formViolations.getViolations('/birthdayMonth') is not empty %} is-invalid{% endif %}"
+                    {{ config('core.loginRegistration.birthdayFieldRequired') ? 'required="required"' }}>
+                {% if not data.get('birthdayMonth') %}
+                    <option selected="selected"
+                            value="">
+                        {{ "account.personalBirthdaySelectMonth"|trans|sw_sanitize }}
+                    </option>
+                {% endif %}
+                {% for month in range(1, 12) %}
+                    <option value="{{ month }}"
+                            {% if month == data.get('birthdayMonth') %} selected="selected"{% endif %}>
+                        {{ month }}
+                    </option>
+                {% endfor %}
+            </select>
+
+            {% block component_address_personal_fields_birthday_select_month_error %}
+                {% if formViolations.getViolations('/birthdayMonth') is not empty %}
+                    {% sw_include '@Storefront/storefront/utilities/form-violation.html.twig' with {
+                        violationPath: '/birthdayMonth'
+                    } %}
+                {% endif %}
+            {% endblock %}
+        </div>
+    {% else %}
+        {{ parent() }}
+    {% endif %}
+{% endblock %}
+
+{% block component_address_personal_fields_birthday_select_year %}
+    {% if theme_config('miiso-float-labels') %}
+        <div class="form-group col-md-2 col-4">
+            {% set currentYear = "now"|date('Y') %}
+            {% set startYear = currentYear - 120 %}
+
+            {% block component_address_personal_fields_birthday_year_label %}
+                <label for="{{ prefix }}personalBirthdayYear">
+                    {{ "account.personalBirthdaySelectYear"|trans|sw_sanitize }}{{ config('core.loginRegistration.birthdayFieldRequired') ? "general.required"|trans|sw_sanitize }}
+                </label>
+            {% endblock %}
+
+            <select name="{% if prefix %}{{ prefix }}[birthdayYear]{% else %}birthdayYear{% endif %}"
+                    id="{{ prefix }}personalBirthdayYear"
+                    class="custom-select{% if formViolations.getViolations('/birthdayYear') is not empty %} is-invalid{% endif %}"
+                    {{ config('core.loginRegistration.birthdayFieldRequired') ? 'required="required"' }}>
+                {% if not data.get('birthdayYear') %}
+                    <option selected="selected"
+                            value="">
+                        {{ "account.personalBirthdaySelectYear"|trans|sw_sanitize }}
+                    </option>
+                {% endif %}
+                {% for year in range(currentYear, startYear) %}
+                    <option value="{{ year }}"
+                            {% if year == data.get('birthdayYear') %} selected="selected"{% endif %}>
+                        {{ year }}
+                    </option>
+                {% endfor %}
+            </select>
+
+            {% block component_address_personal_fields_birthday_select_year_error %}
+                {% if formViolations.getViolations('/birthdayYear') is not empty %}
+                    {% sw_include '@Storefront/storefront/utilities/form-violation.html.twig' with {
+                        violationPath: '/birthdayYear'
+                    } %}
+                {% endif %}
+            {% endblock %}
+        </div>
+    {% else %}
+        {{ parent() }}
+    {% endif %}
+{% endblock %}

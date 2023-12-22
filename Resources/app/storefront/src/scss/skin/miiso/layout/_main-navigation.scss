@@ -1,0 +1,242 @@
+// --------------------------------------------------
+// copyright  ©  TAB10 / ENOOA s.r.o.
+// --------------------------------------------------
+
+.nav-main{
+    .miiso-fixed-nav &{
+        position: fixed;
+        width: 100%;
+        z-index: 1101;
+        top: 0;
+
+        .no-scroll &{
+            z-index: 2;
+        }
+    }
+
+    .miiso-fixed-nav.modal-open &{
+        z-index:2;
+    }
+}
+
+.main-navigation{
+    border-bottom: 1px solid $miiso-header-navi-bordercolor;
+    background: $miiso-header-navi-background-color;
+    box-shadow: 0 10px 10px -12px rgba(0,0,0,.1);
+
+    .header-logo-main{
+        display: flex;
+        align-items: center;
+        opacity: 0;
+        width: 1px;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        @include transform(translateY(-50%));
+        @include transition();
+
+        img{
+            max-height: 35px;
+        }
+    }
+
+    .miiso-fixed-nav &{
+        .header-logo-main{
+            width: 100px;
+            opacity: 1;
+        }
+
+        .col-auto{
+            opacity: 1;
+
+            .btn .icon {
+                color: $miiso-header-navi-color;
+
+                > svg{
+                    top: 4px;
+                }
+            }
+        }
+
+        .main-navigation-menu{
+            padding: 0 45px 0 125px;
+        }
+    }
+
+    .miiso-additional-nav-col{
+        position: absolute;
+        right: 0;
+        opacity: 0;
+        padding: 0;
+        top: 50%;
+        @include transform(translateY(-50%));
+
+        .header-cart-total{
+            bottom:-25px;
+        }
+    }
+}
+
+.main-navigation-menu{
+    font-size: $miiso-header-navi-fontsize;
+    position: relative;
+    @include transition();
+
+    .miiso-center-navi & {
+        justify-content: center;
+    }
+
+    .main-navigation-link{
+        .main-navigation-link-text{
+            &::after{
+                content: "";
+                display: block;
+                background: $sw-color-brand-primary;
+                width: 100%;
+                height: 1px;
+                position: absolute;
+                bottom: -13px;
+                @include transition();
+                @include scaleX(0);
+            }
+        }
+    }
+
+    &:hover{
+        .main-navigation-link{
+
+            &.is-open{
+                .main-navigation-link-text{
+                    &::after{
+                        @include scaleX(1);
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+.main-navigation-link{
+    padding: 12px 10px;
+    background: $miiso-header-navi-background-color;
+    color: $miiso-header-navi-color;
+
+    &:hover{
+        color: $miiso-header-navi-color-hover;
+
+        .main-navigation-link-text{
+            color: $miiso-header-navi-color-hover;
+        }
+    }
+
+    &:hover,
+    &.active,
+    &.is-open{
+        background: $miiso-header-navi-background-color-hover;
+    }
+
+    &.active{
+        font-weight: 500;
+    }
+
+    &.active,
+    &.is-open{
+
+        .main-navigation-link-text{
+            color: $miiso-header-navi-color-hover;
+
+            &::after{
+                @include scaleX(1);
+            }
+        }
+    }
+
+    &:first-child{
+        padding-left: 0;
+    }
+
+    .main-navigation-link-text{
+        border: none;
+        padding-bottom: 0;
+        position: relative;
+    }
+
+    .miiso-sticky-navi & {
+        &:nth-child(2){
+            padding-left: 0;
+        }
+    }
+}
+
+// Flyout
+.navigation-flyout{
+    margin-top:1px;
+    max-width: 1400px;
+    left: 50%;
+    z-index: 1;
+    @include transform(translateX(-50%));
+}
+
+.navigation-flyout-close{
+    position: absolute;
+    right: 33px;
+    z-index: 1;
+
+    svg {
+        filter:drop-shadow(0 1px 0 #fff);
+    }
+}
+
+
+.navigation-flyout-content{
+    padding: 0;
+}
+
+.navigation-flyout-teaser{
+    margin-right: -20px;
+}
+
+.navigation-flyout-teaser-image-container{
+    height: auto;
+}
+
+.navigation-flyout-categories{
+
+    &.is-level-0 > .navigation-flyout-col{
+        padding-top: 20px;
+
+        &::before{
+            display: none;
+        }
+    }
+
+    &:not(.is-level-0){
+        margin: 0;
+    }
+}
+
+.navigation-flyout-link{
+    font-size: 13px;
+    margin: 0;
+
+    &:hover{
+        padding-left: 0;
+    }
+}
+
+
+.navigation-flyout-bar,
+.navigation-flyout-bar .col-auto{
+    padding: 0;
+}
+
+.navigation-flyout-category-link{
+    display: none;
+}
+
+
+
+
+

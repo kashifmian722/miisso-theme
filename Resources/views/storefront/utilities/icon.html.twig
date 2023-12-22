@@ -1,0 +1,71 @@
+{% sw_extends '@Storefront/storefront/utilities/icon.html.twig' %}
+
+{%- block utilities_icon -%}
+
+    {% set styles = [ size, color, rotation, flip, class ] %}
+
+    {%- if pack is not defined -%}
+        {% set pack = 'default' %}
+    {%- endif -%}
+
+    {%- if namespace is not defined -%}
+        {% set namespace = 'Storefront' %}
+    {%- endif -%}
+
+
+    {%- if themeIconConfig[pack] is defined -%}
+        <span class="icon icon-{{ pack }} icon-{{ pack }}-{{ name }}{% for entry in styles %}{% if entry != "" %} icon-{{ entry }}{% endif %}{% endfor %}">
+            {% set icon =  source('@' ~ themeIconConfig[pack].namespace ~ '/' ~ themeIconConfig[pack].path ~'/'~ name ~ '.svg', ignore_missing = true) %}
+            {{ icon|sw_icon_cache|raw }}
+        </span>
+    {%- else -%}
+
+        <span class="icon icon-{{ name }}{% for entry in styles %}{% if entry != "" %} icon-{{ entry }}{% endif %}{% endfor %}">
+
+            {% if name in [
+                'arrow-medium-left',
+                'arrow-head-left',
+                'arrow-medium-right',
+                'arrow-head-right',
+                'arrow-head-left',
+                'arrow-medium-double-left',
+                'arrow-medium-double-right',
+                'arrow-medium-down',
+                'arrow-up',
+                'avatar',
+                'bag',
+                'cart',
+                'checkmark-circle',
+                'checkmark',
+                'envelope',
+                'heart',
+                'help',
+                'info',
+                'plus',
+                'sorting',
+                'search',
+                'sm-facebook',
+                'sm-instagram',
+                'sm-pinterest',
+                'sm-twitter',
+                'sm-skype',
+                'sm-whatsapp',
+                'sm-youtube',
+                'star',
+                'star-half',
+                'trash',
+                'x'
+            ] %}
+                <svg>
+                    <use xlink:href="#tabten-miiso-{{ name }}" />
+                </svg>
+            {% else %}
+
+                {% set icon = source('@' ~ namespace ~ '/assets/icon/'~ pack ~'/'~ name ~'.svg', ignore_missing = true) %}
+                {{ icon|sw_icon_cache|raw }}
+
+            {% endif %}
+        </span>
+    {%- endif -%}
+
+{%- endblock -%}

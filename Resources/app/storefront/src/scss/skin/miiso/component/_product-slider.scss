@@ -1,0 +1,54 @@
+// --------------------------------------------------
+// copyright  ©  TAB10 / ENOOA s.r.o.
+// --------------------------------------------------
+.product-slider {
+
+    &.has-nav {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    &.has-border.has-nav {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+}
+
+.base-slider-controls-prev,
+.base-slider-controls-next{
+    background: rgba(255,255,255,.8);
+    border: 1px solid $miiso-border-color;
+    width: 45px;
+    height: 45px;
+    border-radius: 0;
+    line-height: inherit;
+    opacity: 1;
+    @include transition();
+
+    .icon{
+        color: #1a1a1a;
+    }
+
+    &:hover{
+        background: rgba(255,255,255,1);
+        color: darken($sw-text-color, 50%);
+        border-color: $miiso-border-color;
+        //@include transform(scale(1.1) translateY(-50%));
+    }
+}
+.base-slider{
+    .tns-nav .base-slider-dot,
+    .base-slider-dots .base-slider-dot,
+    .tns-nav button,
+    .base-slider-dots button{
+        width: 40px;
+        height: 4px;
+        border-radius: 0;
+        padding: 0;
+    }
+}
+
+
+.cms-section .boxed{
+    padding:0;
+}

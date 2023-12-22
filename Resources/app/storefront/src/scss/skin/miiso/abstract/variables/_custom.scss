@@ -1,0 +1,24 @@
+// --------------------------------------------------
+// copyright  ©  TAB10 / ENOOA s.r.o.
+// --------------------------------------------------
+
+// Cookie Permission
+$miiso-cookiepermission-background-color:rgba(0,0,0,.6);
+$miiso-cookiepermission-color:#fff;
+
+$svg-color:$miiso-topbar-font-color;
+
+
+//html[lang="de-DE"]{
+//    $miiso-call-to-action-text:Mehr erfahren;
+//}
+//
+//html[lang="en-GB"]{
+//    $miiso-call-to-action-text-en:More;
+//}
+
+
+.btn-lg,
+.btn-group-lg > .btn, .btn-buy{
+    font-size: 13px;
+}

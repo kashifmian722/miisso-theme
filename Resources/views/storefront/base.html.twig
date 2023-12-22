@@ -1,0 +1,19 @@
+{% sw_extends '@Storefront/storefront/base.html.twig' %}
+
+{% block base_body_classes %}
+    {{ parent() }}
+    {% if theme_config('miiso-fullwidth-header') %} miiso-fullwidth-header{% endif %}
+    {% if theme_config('miiso-navigation-layout') == "center" %} miiso-center-navi{% endif %}
+    {% if theme_config('miiso-fluid-productbox') %} miiso-fluid-productbox-content{% endif %}
+    {% if theme_config('miiso-open-filter-in-sidebar') %} miiso-open-filter-in-sidebar{% endif %}
+    {% if theme_config('miiso-float-labels') %} miiso-float-labels{% endif %}
+    {% if theme_config('miiso-sticky-navi') %} miiso-sticky-navi{% endif %}
+    {% if theme_config('miiso-fixed-filter-in-listing') %} miiso-fixed-filter-in-listing{% endif %}
+    miiso-page-{{  controllerAction|lower }}-{{  controllerName|lower }}
+{% endblock %}
+
+
+{% block base_script_hmr_mode %}
+    {{ parent() }}
+    {% sw_include '@Storefront/storefront/utilities/miiso-icons.html.twig' %}
+{% endblock %}

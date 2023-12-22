@@ -1,0 +1,10 @@
+{% sw_extends '@Storefront/storefront/page/product-detail/properties.html.twig' %}
+
+{% block page_product_detail_properties_inner %}
+    {% if theme_config('miiso-properties-tab') %}
+
+    {% else %}
+        {{ parent() }}
+    {% endif %}
+
+{% endblock %}

@@ -1,0 +1,17 @@
+{% sw_extends '@Storefront/storefront/layout/sidebar/category-navigation.html.twig' %}
+
+
+{% block layout_navigation_categories_link_children_name %}
+    {{ parent() }}
+    {% sw_icon 'arrow-medium-right' %}
+{% endblock %}
+
+{% block layout_navigation_categories_link_name %}
+    {{ parent() }}
+    {% sw_icon 'arrow-medium-right' %}
+
+{#    {% if item.category.media %}#}
+{#        <img src="{{ item.category.media.url }}">#}
+{#    {% endif %}#}
+
+{% endblock %}

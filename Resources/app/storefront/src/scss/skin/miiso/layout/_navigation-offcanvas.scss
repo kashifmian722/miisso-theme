@@ -1,0 +1,66 @@
+// --------------------------------------------------
+// copyright  ©  TAB10 / ENOOA s.r.o.
+// --------------------------------------------------
+.navigation-offcanvas-actions{
+    padding: 10px 0;
+}
+
+.navigation-offcanvas-list-item{
+    border-color: $miiso-border-color;
+
+    &:last-child{
+        border-bottom-color: $miiso-border-color;
+    }
+}
+
+.navigation-offcanvas-link {
+    padding: 16px $spacer-md;
+}
+
+.navigation-offcanvas-overlay{
+    .navigation-offcanvas-headline{
+        display: none;
+    }
+}
+
+.navigation-offcanvas-link.is-back-link{
+    border-top-color:$miiso-border-color;
+}
+
+
+.cart-item-remove{
+    .btn-light{
+        padding: 0 10px;
+        background: none;
+        background: transparent;
+        border-color: transparent;
+        color: $sw-text-color;
+
+        &:hover{
+            border-color: transparent;
+            background: transparent;
+
+            .icon{
+                color: $sw-color-danger;
+            }
+        }
+
+        &:not(:disabled):not(.disabled):active,
+        &:focus{
+            background: transparent;
+            border-color: transparent;
+        }
+    }
+
+    .icon{
+        width: 12px;
+
+        > svg{
+            top: 5px;
+        }
+    }
+}
+
+
+
+
