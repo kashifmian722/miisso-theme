@@ -1,6 +1,6 @@
 {
-  "name": "swag/miisso",
-  "description": "Theme smiisso",
+  "name": "swag/theme-skeleton",
+  "description": "Theme skeleton plugin",
   "type": "shopware-platform-plugin",
   "license": "MIT",
   "autoload": {
@@ -9,10 +9,10 @@
     }
   },
   "extra": {
-    "shopware-plugin-class": "miisso\\miisso",
+    "shopware-plugin-class": "Choomntr\\Choomntr",
     "label": {
-      "de-DE": "Theme miisso plugin",
-      "en-GB": "Theme miisso plugin"
+      "de-DE": "Theme Choomntr plugin",
+      "en-GB": "Theme Choomntr plugin"
     }
   }
 }

@@ -1,10 +1,10 @@
 {
-  "name": "TabtenTemplateMiiso",
-  "author": "TAB10 / ENOOA s.r.o.",
+  "name": "choomntr",
+  "author": "Shopware AG",
   "views": [
-    "@Storefront",
-    "@Plugins",
-    "@TabtenTemplateMiiso"
+     "@Storefront",
+     "@Plugins",
+     "@choomntr"
   ],
   "previewMedia": "app/storefront/dist/assets/preview.jpg",
   "style": [

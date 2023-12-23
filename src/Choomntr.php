@@ -1,11 +1,11 @@
 <?php declare(strict_types=1);
 
-namespace Miisso;
+namespace Choomntr;
 
 use Shopware\Core\Framework\Plugin;
 use Shopware\Storefront\Framework\ThemeInterface;
 
-class miisso extends Plugin implements ThemeInterface
+class Choomntr extends Plugin implements ThemeInterface
 {
     public function getThemeConfigPath(): string
     {
